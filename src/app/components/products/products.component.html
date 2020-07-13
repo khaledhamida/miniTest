@@ -1,0 +1,30 @@
+<div class="row margin">
+    <div class="col-md-6 mx-auto">
+
+        <div class="col-ms-6">
+            <h2> Products list</h2>
+            <button (click)="addProduct()" class="btn btn-sm btn-primary marginBtn" style="margin-right:50px;">Add</button>
+        </div>
+
+        <table class="table table-striped">
+            <tbody>
+                <tr *ngFor="let product of products">
+                    <th scope="row">{{product.id}}</th>
+                    <td>
+                        {{product.name}}
+                    </td>
+                    <td>
+                        <button (click)="displayProduct(product.id)" class="btn btn-sm btn-success" style="margin-right:50px;">Display</button>
+                    </td>
+                    <td>
+                        <button (click)="EditProduct(product.id) " class="btn btn-sm btn-warning " style="margin-right:50px; ">Edit</button>
+                    </td>
+                    <td>
+                        <button (click)="deleteProduct(product.id) " class="btn btn-sm btn-danger ">Delete</button>
+                    </td>
+
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
